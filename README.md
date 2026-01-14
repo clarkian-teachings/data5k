@@ -25,7 +25,7 @@ If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*includ
 
 ## Teaching Notebooks (for weekly practice and revision)
 
-- Week 1: [`week_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_01/week_1_notebook.ipynb)
+- Week 1: [`week_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_01/week_1_notebook.ipynb) and data <a href="https://raw.githubusercontent.com/clarkian-teachings/data5k/main/week_01/aus_cpi.csv">aus_cpi.csv</A>
 - Week 2 (Notebook 1): [`week_2_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_02/week_2_1_notebook.ipynb)
 - Week 2 (Notebook 2): [`week_2_2_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_02/week_2_2_notebook.ipynb)
 - Week 3 (Notebook 1): [`week_3_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_03/week_3_1_notebook.ipynb)
