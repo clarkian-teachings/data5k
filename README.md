@@ -17,6 +17,10 @@ In-browser AI-assisted support is quite extensive and often very helpful - see t
        style="border:12px solid #1f6feb; border-radius:8px;">
 </a>
 
+If you don't see all the AI-assisted support options, you can enable them using <B><I>this</I></B> button at the bottom (centre) of your browser:
+
+<img src="ToggleGemini.png" width="240">
+
 If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*include week #, cell #, the full error message, and a screenshot if possible*).
 
 ## ASSESSMENT A2 
@@ -25,15 +29,15 @@ If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*includ
 
 ## Teaching Notebooks (for weekly practice and revision)
 
-- Week 1: [`week_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_01/week_1_notebook.ipynb) and data <a href="https://raw.githubusercontent.com/clarkian-teachings/data5k/main/week_01/aus_cpi.csv">aus_cpi.csv</A>
+- Week 1: [`week_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_01/week_1_notebook.ipynb) and data [`aus_cpi.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/week_01/aus_cpi.csv)
 - Week 2 (Notebook 1): [`week_2_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_02/week_2_1_notebook.ipynb)
-- Week 2 (Notebook 2): [`week_2_2_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_02/week_2_2_notebook.ipynb)
 - Week 3 (Notebook 1): [`week_3_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_03/week_3_1_notebook.ipynb)
 - Week 3 (Notebook 2): [`week_3_2_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_03/week_3_2_notebook.ipynb) 
 - Week 4: [`week_4_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_04/week_4_notebook.ipynb)
 - Week 5: [`week_5_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_05/week_5_notebook.ipynb) 
 - Week 6 (Notebook 1): [`week_6_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_06/week_6_1_notebook.ipynb) 
 - Week 6 (Notebook 2): [`week_6_2_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_06/week_6_2_notebook.ipynb) 
+- Week 8: [`week_8_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_08/week_8_notebook.ipynb) and data [`TeleConnect.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/week_08/TeleConnect.csv)
 
 ## Supplementary Notebooks (for reference)
 
