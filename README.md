@@ -25,7 +25,7 @@ If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*includ
 
 ## ASSESSMENT A2 
 
-- Assessment A2 materials (notebook + data + instructions) will be posted here 10 minutes before Week 9's class i.e. at **12:50pm Perth time on Thursday 22 January 2026**)
+- Assessment A2 materials (notebook + data + instructions) will be posted here 10 minutes before Week 9's class i.e. at **12:50pm Perth time TODAY - Thursday 22 January 2026**)
 
 ## Teaching Notebooks (for weekly practice and revision)
 
@@ -45,7 +45,7 @@ If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*includ
 - [`Workbook 2 - Fitting and Overfitting`](https://colab.research.google.com/github/clarkian-teachings/clarkian-python-ml-intro/blob/main/notebooks/Python_Teaching_Workbook_2.ipynb)
 - [`Workbook 3 - Putting the Data in Data Science`](https://colab.research.google.com/github/clarkian-teachings/clarkian-python-ml-intro/blob/main/notebooks/Python_Teaching_Workbook_3.ipynb)
 
-This repository contains **updated, instructor-checked versions** of the weekly notebooks used in DATA5000, plus links to some of Isin Clark's personal training materisls
+This repository contains **updated, instructor-checked versions** of the weekly notebooks used in DATA5000, plus links to some of Iain Clark's personal training materials.
 These materials are provided solely as supplementary teaching support and do not replace the official materials.
 
 ---
