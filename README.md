@@ -25,7 +25,7 @@ If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*includ
 
 ## ASSESSMENT A2 
 
-- Assessment A2 materials (notebook + data + instructions) will be posted here 10 minutes before Week 9's class i.e. at **12:50pm Perth time TODAY - Thursday 22 January 2026**)
+- Assessment A2 materials: [`A2 NOTEBOOK`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/assessments/DATA5000_A2.ipynb) , datasets: [`facebook_data.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/facebook_data.csv) and [`instagram_data.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/instagram_data.csv) 
 
 ## Teaching Notebooks (for weekly practice and revision)
 
