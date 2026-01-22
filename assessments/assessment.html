@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment 2 Guidelines - DATA5000</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background: white;
+            color: #333;
+            overflow: hidden;
+        }
+        
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+        
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            padding: 50px 80px;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+        }
+        
+        .slide.active {
+            display: flex;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            color: #dc143c;
+            margin-bottom: 20px;
+            font-weight: 400;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            color: #dc143c;
+            margin-bottom: 25px;
+            font-weight: 400;
+            border-bottom: 2px solid #dc143c;
+            padding-bottom: 10px;
+        }
+        
+        h3 {
+            font-size: 1.5em;
+            color: #dc143c;
+            margin: 20px 0 15px 0;
+            font-weight: 400;
+        }
+        
+        p {
+            font-size: 1.2em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            font-size: 1.15em;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        .title-slide {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .title-slide h1 {
+            font-size: 3.2em;
+            margin-bottom: 30px;
+        }
+        
+        .title-slide p {
+            font-size: 1.4em;
+            color: #666;
+        }
+        
+        .box {
+            background: #f8f8f8;
+            border-left: 4px solid #dc143c;
+            padding: 20px 25px;
+            margin: 15px 0;
+        }
+        
+        .box-green {
+            background: #f0fff0;
+            border-left: 4px solid #228b22;
+            padding: 20px 25px;
+            margin: 15px 0;
+        }
+        
+        .box-blue {
+            background: #f0f8ff;
+            border-left: 4px solid #4169e1;
+            padding: 20px 25px;
+            margin: 15px 0;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 1.05em;
+        }
+        
+        th {
+            background: #dc143c;
+            color: white;
+            font-weight: 400;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .marks {
+            display: inline-block;
+            background: #dc143c;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+        
+        .nav-btn {
+            padding: 12px 25px;
+            background: #dc143c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+        
+        .nav-btn:hover {
+            background: #b01030;
+        }
+        
+        .nav-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .slide-counter {
+            position: fixed;
+            top: 20px;
+            right: 30px;
+            font-size: 1em;
+            color: #999;
+        }
+        
+        .code-example {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 1em;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .checklist li {
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .checklist li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: #dc143c;
+        }
+        
+        strong {
+            color: #dc143c;
+            font-weight: 600;
+        }
+        
+        .footer {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+            font-size: 0.9em;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide-counter">
+            <span id="current-slide">1</span> / <span id="total-slides">12</span>
+        </div>
+
+        <!-- Slide 1: Title -->
+        <div class="slide title-slide active">
+            <h1>Assessment 2 Guidelines</h1>
+            <p>Generative AI for Predictive Analysis</p>
+            <p style="margin-top: 40px; font-size: 1.2em;">DATA5000 - Artificial Intelligence Programming in Business Analytics</p>
+            <p style="margin-top: 60px; font-size: 1.1em; color: #999;">Week 9 | In-Class Assessment</p>
+        </div>
+
+        <!-- Slide 2: Overview -->
+        <div class="slide">
+            <h2>Assessment Overview</h2>
+            
+            <div class="box">
+                <p><strong>Weight:</strong> 35% of your final grade</p>
+                <p><strong>Duration:</strong> 3 hours in class</p>
+                <p><strong>Format:</strong> Group work (4-5 members)</p>
+            </div>
+            
+            <h3>Structure</h3>
+            <table>
+                <tr>
+                    <th>Component</th>
+                    <th>Marks</th>
+                    <th>Time</th>
+                </tr>
+                <tr>
+                    <td>Part A: Data Analysis & Business Problem</td>
+                    <td>10 marks</td>
+                    <td>Hour 1</td>
+                </tr>
+                <tr>
+                    <td>Part B: Generative AI Marketing Strategy</td>
+                    <td>15 marks</td>
+                    <td>Hour 2</td>
+                </tr>
+                <tr>
+                    <td>Part C: Team Presentation</td>
+                    <td>10 marks</td>
+                    <td>Hour 3</td>
+                </tr>
+            </table>
+            
+            <div class="box-blue">
+                <p><strong>Scenario:</strong> Your team is a marketing agency analysing social media performance for a client using Facebook and Instagram data.</p>
+            </div>
+        </div>
+
+        <!-- Slide 3: What You Submit -->
+        <div class="slide">
+            <h2>What You Submit</h2>
+            
+            <h3>At End of Hour 2</h3>
+            <ol>
+                <li><strong>Completed Notebook</strong> — Submit via Dropbox portal</li>
+                <li><strong>Slide Deck</strong> — Submit via Turnitin portal</li>
+            </ol>
+            
+            <h3>During Hour 3</h3>
+            <ol start="3">
+                <li><strong>Team Presentation</strong> — Present your campaign to the class</li>
+            </ol>
+            
+            <div class="box" style="margin-top: 30px;">
+                <h3 style="margin-top: 0;">Submission Checklist</h3>
+                <ul class="checklist">
+                    <li>All code cells executed with outputs visible</li>
+                    <li>All 10 questions answered</li>
+                    <li>Business problem statement completed</li>
+                    <li>All prompt engineering tasks filled in</li>
+
+                    <li>Slide deck saved and uploaded</li>
+                </ul>
+            </div>
+            
+            <p style="margin-top: 20px; color: #dc143c;"><strong>Warning:</strong> Uploading wrong files or incomplete work will be penalised as poor project management.</p>
+        </div>
+
+        <!-- Slide 4: Part A Overview -->
+        <div class="slide">
+            <h2>Part A: Data Analysis (6 marks)</h2>
+            
+            <p>You will analyse Facebook and Instagram campaign data to identify patterns and formulate a business problem.</p>
+            
+            <h3>Sections</h3>
+            <table>
+                <tr>
+                    <th>Section</th>
+                    <th>Tasks</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>Section 2: Exploratory Analysis</td>
+                    <td>Calculate engagement rates, analyse by content type and age group</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Section 3: SHAP Analysis</td>
+                    <td>Run predictive model, interpret feature importance</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Section 4: Treatment Effects</td>
+                    <td>Calculate ATE and CATE for video content</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Section 5: Business Problem</td>
+                    <td>Write problem statement and identify stakeholders</td>
+                    <td>1</td>
+                </tr>
+            </table>
+            
+            <div class="box-green">
+                <p><strong>Key Concepts Tested:</strong> Engagement rate calculation, SHAP interpretation, treatment effects (ATE/CATE), correlation vs causation</p>
+            </div>
+        </div>
+
+        <!-- Slide 5: Part A Code Tasks -->
+        <div class="slide">
+            <h2>Part A: Code You Must Complete</h2>
+            
+            <h3>Task 1: Calculate Engagement Rate</h3>
+            <p>Formula: <code>engagement_rate = (engagement / impressions) * 100</code></p>
+            <div class="code-example">
+fb_data['engagement_rate'] = (fb_data['engagement'] / fb_data['impressions']) * 100
+ig_data['engagement_rate'] = (ig_data['engagement'] / ig_data['impressions']) * 100
+            </div>
+            
+            <h3>Task 2: Group by Content Type (Instagram)</h3>
+            <p>Use the same pattern shown for Facebook, but with column name <code>'content_type'</code></p>
+            <div class="code-example">
+ig_by_type = ig_data.groupby('content_type')['engagement_rate'].mean().sort_values(ascending=False)
+            </div>
+            
+            <h3>Questions to Answer (Q1-Q7)</h3>
+            <p>Read your code outputs carefully to answer:</p>
+            <ul>
+                <li>Which platform/content type/age group performs best?</li>
+                <li>What does SHAP tell us (prediction vs causation)?</li>
+                <li>Which age group benefits most from video content?</li>
+            </ul>
+        </div>
+
+        <!-- Slide 6: Part A Key Concepts -->
+        <div class="slide">
+            <h2>Part A: Key Concepts to Understand</h2>
+            
+            <div class="two-column">
+                <div>
+                    <h3>SHAP Values (Week 4)</h3>
+                    <div class="box">
+                        <p>SHAP shows which features <strong>predict</strong> the outcome.</p>
+                        <p>SHAP does NOT prove <strong>causation</strong>.</p>
+                        <p style="margin-bottom: 0;">Example: High impressions predicts high engagement, but buying impressions may not cause more engagement.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Treatment Effects (Week 4/5)</h3>
+                    <div class="box">
+                        <p><strong>ATE:</strong> Average effect across everyone</p>
+                        <p><strong>CATE:</strong> Effect for specific subgroups</p>
+                        <p style="margin-bottom: 0;">Example: Video content may work better for 18-24 age group than 45-54.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 30px;">Business Problem Statement</h3>
+            <p>Your statement should:</p>
+            <ul>
+                <li>Be specific (mention actual numbers from your analysis)</li>
+                <li>Identify the opportunity or issue</li>
+                <li>Connect to stakeholder needs</li>
+            </ul>
+            
+            <div class="box-blue">
+                <p><strong>Example format:</strong> "Analysis shows [finding] which suggests [opportunity]. This affects [stakeholders] because [impact]."</p>
+            </div>
+        </div>
+
+        <!-- Slide 7: Part B Overview -->
+        <div class="slide">
+            <h2>Part B: Generative AI Strategy (4 marks)</h2>
+            
+            <p>Use generative AI tools to develop a marketing campaign based on your Part A insights.</p>
+            
+            <h3>Sections</h3>
+            <table>
+                <tr>
+                    <th>Section</th>
+                    <th>Tasks</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>Section 6: Strategy Planning</td>
+                    <td>Define target audience, objectives, and AI outputs needed</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Section 7: Prompt Engineering</td>
+                    <td>Write prompts using CRAFT framework</td>
+                    <td>2</td>
+                </tr>
+
+
+            </table>
+            
+            <div class="box-green">
+                <p><strong>Key Concepts Tested:</strong> CRAFT framework, chain of thought prompting, temperature settings, prompt iteration</p>
+            </div>
+        </div>
+
+        <!-- Slide 8: Prompt Engineering -->
+        <div class="slide">
+            <h2>Part B: Prompt Engineering (Week 8)</h2>
+            
+            <h3>CRAFT Framework</h3>
+            <table>
+                <tr>
+                    <th>Letter</th>
+                    <th>Meaning</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><strong>C</strong></td>
+                    <td>Clarity</td>
+                    <td>Be specific about what you want</td>
+                </tr>
+                <tr>
+                    <td><strong>R</strong></td>
+                    <td>Role</td>
+                    <td>"You are a social media marketing expert..."</td>
+                </tr>
+                <tr>
+                    <td><strong>A</strong></td>
+                    <td>Action</td>
+                    <td>"Create 3 Instagram ad headlines..."</td>
+                </tr>
+                <tr>
+                    <td><strong>F</strong></td>
+                    <td>Format</td>
+                    <td>"Present as a numbered list with..."</td>
+                </tr>
+                <tr>
+                    <td><strong>T</strong></td>
+                    <td>Tone</td>
+                    <td>"Use energetic, youthful language"</td>
+                </tr>
+            </table>
+            
+            <h3>Chain of Thought Prompting</h3>
+            <p>Ask the AI to reason step-by-step:</p>
+            <div class="code-example" style="background: #f5f5f5; color: #333;">
+"Think through this step-by-step:
+1. First, identify the target audience characteristics
+2. Then, determine what messaging appeals to them
+3. Next, consider the platform best practices
+4. Finally, recommend the campaign approach
+Show your reasoning for each step."
+            </div>
+        </div>
+
+       
+        <!-- Slide 11: Presentation (Hour 3) -->
+        <div class="slide">
+            <h2>Team Presentation (25 marks)</h2>
+            
+            <p>In Hour 3, your team will present your campaign to the class.</p>
+            
+            <h3>What to Include</h3>
+            <ol>
+                <li><strong>Part A Insights Summary</strong> — Key findings from your data analysis</li>
+                <li><strong>Business Problem</strong> — What problem you identified and why it matters</li>
+                <li><strong>Target Audience</strong> — Who you are targeting and justification from data</li>
+                <li><strong>Campaign Strategy</strong> — Your marketing approach</li>
+                <li><strong>AI-Generated Assets</strong> — Show your slogans, visuals, and other outputs</li>
+                <li><strong>Evaluation Strategy</strong> — How you will measure success?</li>
+            </ol>
+            
+            <h3>Marking Criteria</h3>
+            <table>
+                <tr>
+                    <th>Criteria</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>Overview of Part A insights and connection to campaign</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Demonstration of AI outputs and their relevance</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Business problem and stakeholder alignment</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Use of creative tools</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Clarity, conciseness, and engagement</td>
+                    <td>5</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Slide 12: Tips for Success -->
+        <div class="slide">
+            <h2>Tips for Success</h2>
+            
+            <div class="two-column">
+                <div>
+                    <h3>Do</h3>
+                    <ul>
+                        <li>Run all code cells before answering questions</li>
+                        <li>Read outputs carefully before writing answers</li>
+                        <li>Connect Part B strategy to Part A data insights</li>
+                        <li>Use specific numbers from your analysis</li>
+                        <li>Document all AI interactions as you go</li>
+                        <li>Save your work frequently</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Avoid</h3>
+                    <ul>
+                        <li>Submitting notebook with unexecuted cells</li>
+                        <li>Generic answers not based on data</li>
+                        <li>Forgetting to fill in the AI log</li>
+                        <li>Claiming SHAP proves causation</li>
+                        <li>Using wrong temperature for task type</li>
+                        <li>Last-minute rush on documentation</li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="nav-btn" id="prev-btn" onclick="previousSlide()">Previous</button>
+            <button class="nav-btn" id="next-btn" onclick="nextSlide()">Next</button>
+        </div>
+        
+        <div class="footer">DATA5000 - Kaplan Business School</div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        
+        document.getElementById('total-slides').textContent = totalSlides;
+        
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+            
+            document.getElementById('prev-btn').disabled = currentSlide === 0;
+            document.getElementById('next-btn').disabled = currentSlide === totalSlides - 1;
+        }
+        
+        function nextSlide() {
+            if (currentSlide < totalSlides - 1) {
+                showSlide(currentSlide + 1);
+            }
+        }
+        
+        function previousSlide() {
+            if (currentSlide > 0) {
+                showSlide(currentSlide - 1);
+            }
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousSlide();
+            }
+        });
+        
+        showSlide(0);
+    </script>
+</body>
+</html>
