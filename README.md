@@ -39,6 +39,7 @@ If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*includ
 - Week 6 (Notebook 1): [`week_6_1_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_06/week_6_1_notebook.ipynb) 
 - Week 6 (Notebook 2): [`week_6_2_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_06/week_6_2_notebook.ipynb) 
 - Week 8: [`week_8_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_08/week_8_notebook.ipynb) and data [`TeleConnect.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/week_08/TeleConnect.csv)
+- Week 10: [`week_10_notebook.ipynb`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/week_10/week_10_notebook.ipynb)
 
 ## Supplementary Notebooks (for reference)
 
