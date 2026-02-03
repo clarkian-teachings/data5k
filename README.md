@@ -23,9 +23,9 @@ If you don't see all the AI-assisted support options, you can enable them using 
 
 If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*include week #, cell #, the full error message, and a screenshot if possible*).
 
-## ASSESSMENT A2 
+## ASSESSMENT A3 
 
-- Assessment A2 materials: [`A2 NOTEBOOK`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/assessments/DATA5000_A2.ipynb) , datasets: [`facebook_data.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/facebook_data.csv) and [`instagram_data.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/instagram_data.csv) 
+- Assessment A3 materials: [`A3 NOTEBOOK`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/assessments/DATA5000_A3.ipynb), datasets: [`sales_data.xlsx`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/sales_data.xlsx) and [`customer_reviews.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/customer_reviews.csv) 
 
 ## Teaching Notebooks (for weekly practice and revision)
 
@@ -46,6 +46,13 @@ If you’re still stuck after ~2 minutes, raise your hand 🙋 and ask! (*includ
 - [`Workbook 1 - Getting Started with Python & Google Colab`](https://colab.research.google.com/github/clarkian-teachings/clarkian-python-ml-intro/blob/main/notebooks/Python_Teaching_Workbook_1.ipynb)
 - [`Workbook 2 - Fitting and Overfitting`](https://colab.research.google.com/github/clarkian-teachings/clarkian-python-ml-intro/blob/main/notebooks/Python_Teaching_Workbook_2.ipynb)
 - [`Workbook 3 - Putting the Data in Data Science`](https://colab.research.google.com/github/clarkian-teachings/clarkian-python-ml-intro/blob/main/notebooks/Python_Teaching_Workbook_3.ipynb)
+
+## Assessment notebooks
+
+- Assessment A1 materials: [`A1 NOTEBOOK`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/assessments/DATA5000_A1.ipynb)
+- Assessment A2 materials: [`A2 NOTEBOOK`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/assessments/DATA5000_A2.ipynb), datasets: [`facebook_data.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/facebook_data.csv) and [`instagram_data.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/instagram_data.csv) 
+- Assessment A3 materials: [`A3 NOTEBOOK`](https://colab.research.google.com/github/clarkian-teachings/data5k/blob/main/assessments/DATA5000_A3.ipynb), datasets: [`sales_data.xlsx`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/sales_data.xlsx) and [`customer_reviews.csv`](https://raw.githubusercontent.com/clarkian-teachings/data5k/main/assessments/customer_reviews.csv) 
+
 
 This repository contains **updated, instructor-checked versions** of the weekly notebooks used in DATA5000, plus links to some of Iain Clark's personal training materials.
 These materials are provided solely as supplementary teaching support and do not replace the official materials.
@@ -80,7 +87,8 @@ No assessment materials or Kaplan-owned documents are included.
 
 ```
 data5k/
-├── week_00/        # Compatibility checks (Week 0)
+├── assessments/    
+├── week_00/        # Reserved for pre-course compatibility checks
 ├── week_01/
 ├── week_02/
 ├── week_03/
